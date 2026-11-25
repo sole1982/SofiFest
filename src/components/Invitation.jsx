@@ -154,13 +154,7 @@ export function Invitation() {
             esta noche inolvidable con quienes llenan mi vida de alegría.
           </p>
 
-          <Swiper {...swiperSettings}>
-            {quinceaneraGallery.map((image) => (
-              <SwiperSlide key={`quinceanera-img-${image.id}`}>
-                <img src={image.src} alt={image.alt} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        
         </section>
 
         <section className="countdown-section" id="contador">
@@ -182,17 +176,17 @@ export function Invitation() {
           <div className="details-grid">
             <article>
               <h3>Cuándo</h3>
-              <p>7 p.m.<br /><b>11 de diciembre de 2026</b></p>
+              <p>21:30 hs<br /><b>19 de diciembre de 2026</b></p>
               <a href="#contador" rel="noreferrer">Ver contador</a>
             </article>
             <article>
               <h3>Dónde</h3>
-              <p>Salón de Eventos<br /><b>Celebraciones Argento Cristal</b></p>
+              <p>Salón de Eventos<br /><b>Damalis</b></p>
               <a href="#ubicacion" rel="noreferrer">Ver ubicación</a>
             </article>
             <article>
-              <h3>Vestuario</h3>
-              <p>Noche y Estrellas<br /><b>Código de vestuario</b></p>
+              <h3>Dress Code</h3>
+              <p>Elegante<br /><b>Código de vestuario</b></p>
               <a href="#vestimenta" rel="noreferrer">Ver referencias</a>
             </article>
           </div>
@@ -201,17 +195,11 @@ export function Invitation() {
         <section className="map-section light-paper-section" id="ubicacion">
           <div className="map-copy">
             <p className="kicker">Cómo llegar</p>
-            <p>Celebraciones Argento Cristal</p>
-            <span>Carrera 81 av 80 # 34a 137, Medellín, Antioquia</span>
+            <p>Salón Damalis</p>
+            <span>Calle 51</span>
             <a className="map-link" href={mapUrlReception} target="_blank" rel="noreferrer">Abrir en Google Maps</a>
           </div>
-          <iframe
-            title="Mapa de Celebraciones Argento Cristal"
-            src={mapEmbedUrlReception}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
+         
         </section>
 
         <section className="schedule-section dark-paper-section" id="contacto">
@@ -228,17 +216,10 @@ export function Invitation() {
           <h2>Vestimenta</h2>
 
           <p className="lead">
-            Para estar en armonía con el tema <i>Noche y Estrellas</i>, los invitamos a vestir un atuendo elegante y cómodo
-            en tonos blancos o azul claro. Agradecemos reservar los tonos dorados y oscuros exclusivamente para la familia.
+            Para estar en armonía con la noche, los invitamos a vestir un atuendo elegante y cómodo. Agradecemos reservar los tonos dorados, rosa y blanco exclusivamente para la familia.
           </p>
 
-          <Swiper {...swiperSettings}>
-            {dressCodeGallery.map((image) => (
-              <SwiperSlide key={`dress-code-img-${image.id}`}>
-                <img src={image.src} alt={image.alt} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+         
         </section>
 
         <section className="quote-section">
@@ -265,12 +246,12 @@ export function Invitation() {
           <p className="kicker">Lazos en forma de</p>
           <h2>Obsequios</h2>
           <p className="lead">
-            Tu presencia es lo más importante para nosotros. Si además deseas
-            tener un detalle, hemos preparado una opción sencilla.
+            Tu presencia es lo más importante para mi. Si además deseas
+            tener un detalle, te dejo mi alias.
           </p>
           <div className="gift-card">
-            <h3>Lluvia de sobres</h3>
-            <p>Encontrarás un espacio especial durante la celebración.</p>
+            <h3>sofi.cosen</h3>
+           
           </div>
         </section>
 
@@ -291,15 +272,15 @@ export function Invitation() {
               </h3>
               <p>
                 {rsvpData?.attendance === "yes"
-                  ? "Hemos registrado tu respuesta. Nos alegra compartir este momento tan especial contigo."
-                  : "Hemos registrado tu respuesta. Aunque no puedas asistir, te tendremos presente."}
+                  ? "Registré tu respuesta. Me alegra compartir este momento tan especial contigo."
+                  : "Registré tu respuesta. Aunque no puedas asistir, te tendré presente."}
               </p>
               <button type="button" onClick={() => setRsvpSent(false)}>Enviar otra respuesta</button>
             </div>
           ) : (
             <form className="rsvp-form" onSubmit={submitRsvp}>
               <fieldset className="attendance-field">
-                <legend>¿Podrás acompañarnos?</legend>
+                <legend>¿Podrás acompañarme?</legend>
                 <div className="confirmation-options">
                   <label className={attendance === "yes" ? "selected" : ""}>
                     <input
@@ -405,8 +386,8 @@ export function Invitation() {
           <div className="ornament">
             <img src={floralOrnament} width={88} height="auto" loading="lazy" alt="" />
           </div>
-          <p className="signature">Quince Años</p>
-          <span>11 · 12 · 2026</span>
+          <p className="signature">Sofía.Quince Años</p>
+          <span>19 · 12 · 2026</span>
         </section>
       </footer>
     </>
