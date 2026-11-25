@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 import heroQuinces from "../assets/vid/hero-quinces.mp4";
-import heroQuincesPoster from "../assets/img/hero-quinces-poster.webp";
+import heroQuincesPoster from "../assets/img/dark-blue-texture.jpg";
 
 const quincesLogo = "/img/quinces-logo.webp";
 const invitationCover = "/img/invitation-cover.webp";
