@@ -1436,4 +1436,22 @@ footer .signature {
 .rsvp-confirmation h3 {
   color: #805564;
 }
+/* UNIFICAR COLOR DE LOS TEXTOS DEL CONTADOR Y ASISTENCIA */
 
+.countdown-section h2,
+.countdown-section p,
+.countdown-section strong,
+.countdown-section span,
+.countdown-item,
+.countdown-item * {
+    color: #684F54 !important;
+}
+
+.rsvp-section h2,
+.rsvp-section p,
+.rsvp-section label,
+.rsvp-section legend,
+.rsvp-section span,
+.rsvp-section strong {
+    color: #684F54 !important;
+}
