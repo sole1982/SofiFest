@@ -624,12 +624,7 @@ h3 {
   padding: 48px;
 }
 
-.quote-section::before {
-  background: rgba(31, 39, 60, .57);
-  content: "";
-  inset: 0;
-  position: absolute;
-}
+
 
 .quote-video {
   background: #142238;
