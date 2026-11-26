@@ -111,5 +111,11 @@ export function useBackgroundMusic(src) {
     setEnabled((current) => !current);
   }, []);
 
-  return { enabled, playing, unavailable, toggle };
+  return {
+  enabled,
+  playing,
+  unavailable,
+  toggle,
+  play: attemptPlay,
+};
 }
