@@ -99,21 +99,27 @@ export function Intro({ onEnvelopeOpen }) {
           }
         }}
       >
-        <img className={intro-media intro-poster ${introVisible ? "hidden" : ""}} src={invitationCover} alt="" />
-        <video
-          className={intro-media intro-video ${introVisible ? "visible" : ""}}
-          ref={introVideo}
-          src={invitationOpening}
-          poster={invitationCover}
-          muted
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          onTimeUpdate={trackIntroProgress}
-          onEnded={() => setInvitationOpen(true)}
-          onError={handleIntroError}
-        />
-        {!envelopeOpening && <p className="intro-hint">Toca para abrir</p>}
+        <img
+  className={`intro-media intro-poster ${introVisible ? "hidden" : ""}`}
+  src={invitationCover}
+  alt=""
+/>
+       <video
+  className={`intro-media intro-video ${introVisible ? "visible" : ""}`}
+  ref={introVideo}
+  src={invitationOpening}
+  poster={invitationCover}
+  muted
+  playsInline
+  preload="auto"
+  aria-hidden="true"
+  onTimeUpdate={trackIntroProgress}
+  onEnded={() => setInvitationOpen(true)}
+  onError={handleIntroError}
+/>
+     {!envelopeOpening && (
+  <p className="intro-hint">TOCÁ PARA ABRIR TU INVITACIÓN</p>
+)}
       </section>
 
       <header className="hero" id="inicio">
