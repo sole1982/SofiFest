@@ -1116,6 +1116,222 @@ footer .ornament,
   }
 }
 
+/* =========================================
+   NUEVA PALETA SOFIA - ROSA Y CHAMPAGNE
+   ========================================= */
+
+:root {
+  color: #684F54;
+  background: #F8EDE8;
+}
+
+/* PORTADA */
+.invitation-cover {
+  background: #EBC7D0;
+}
+
+/* HERO PRINCIPAL */
+.hero {
+  color: #FFF8F3;
+}
+
+.hero-video {
+  background: #D8AEBB;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 48, 62, .30),
+    rgba(85, 48, 62, .42) 48%,
+    rgba(85, 48, 62, .55)
+  );
+}
+
+h1 em {
+  color: #FFF4EB;
+}
+
+.hero-date {
+  color: #F8E6D9;
+}
+
+.outline-button {
+  border-color: rgba(255, 235, 220, .85);
+}
+
+.outline-button:hover {
+  background: #F8EDE8;
+  color: #704653;
+}
+
+/* SECCIONES OSCURAS: CUENTA REGRESIVA Y CONFIRMACIÓN */
+.countdown-section,
+.rsvp-section {
+  background: linear-gradient(135deg, #805564, #A87583, #704653);
+  background-image: none;
+  color: #FFF8F3;
+}
+
+.countdown-section h2,
+.rsvp-section h2 {
+  color: #FBE9DD;
+}
+
+.countdown-item {
+  border-color: rgba(248, 226, 207, .4);
+}
+
+.countdown strong {
+  color: #F3D5AE;
+}
+
+/* TÍTULOS Y DETALLES */
+h2,
+h3,
+.kicker,
+.signature {
+  color: #986B56;
+}
+
+.details-grid article,
+.gift-card {
+  background: rgba(255, 255, 255, .58);
+  border-color: rgba(198, 161, 91, .48);
+}
+
+/* LÍNEA DE TIEMPO */
+.timeline-centered::before,
+.timeline-event::before {
+  background: #C6A15B;
+}
+
+.timeline-content time,
+.timeline-content h3 {
+  color: #986B56;
+}
+
+/* MAPA Y ENLACES */
+.map-link,
+.contact-link {
+  border-color: #A87583;
+  color: #8B5969;
+}
+
+.map-link:hover,
+.contact-link:hover {
+  background: #A87583;
+  color: #FFF8F3;
+}
+
+/* FRASE CON VIDEO */
+.quote-section::before {
+  background: rgba(91, 54, 67, .48);
+}
+
+.quote-video {
+  background: #D8AEBB;
+}
+
+.quote-section div {
+  color: #FFF8F3;
+}
+
+.quote-section span {
+  color: #F3D5AE;
+}
+
+/* FORMULARIO */
+.rsvp-form,
+.rsvp-confirmation {
+  background: #FFF9F5;
+  border-color: rgba(198, 161, 91, .65);
+  color: #684F54;
+}
+
+.attendance-field legend,
+.form-grid label {
+  color: #986B56;
+}
+
+.attendance-field label {
+  border-color: #D8B6B8;
+}
+
+.attendance-field label.selected {
+  background: #A87583;
+  border-color: #A87583;
+  color: #FFF8F3;
+}
+
+.attendance-field label:has(input:focus-visible) {
+  outline-color: #A87583;
+}
+
+.form-grid input,
+.form-grid textarea {
+  border-color: #D8B6B8;
+  color: #684F54;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus {
+  border-color: #A87583;
+  box-shadow: 0 0 0 2px rgba(168, 117, 131, .16);
+}
+
+/* BOTÓN DE CONFIRMACIÓN */
+.submit-button,
+.rsvp-confirmation button {
+  background: #A87583;
+  border-color: #A87583;
+  color: #FFF8F3;
+}
+
+.submit-button:hover,
+.rsvp-confirmation button:hover {
+  background: #805564;
+  border-color: #805564;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  color: #8B5969;
+}
+
+footer .signature {
+  color: #986B56;
+}
+
+/* BOTÓN DE MÚSICA */
+.music-toggle {
+  background: #A87583;
+  color: #FFF8F3;
+  box-shadow: 0 6px 18px rgba(91, 54, 67, .22);
+}
+
+.music-toggle:hover {
+  background: #805564;
+}
+
+@keyframes music-pulse {
+  0% {
+    box-shadow: 0 6px 18px rgba(91, 54, 67, .22),
+      0 0 0 0 rgba(198, 161, 91, .45);
+  }
+
+  70% {
+    box-shadow: 0 6px 18px rgba(91, 54, 67, .22),
+      0 0 0 12px rgba(198, 161, 91, 0);
+  }
+
+  100% {
+    box-shadow: 0 6px 18px rgba(91, 54, 67, .22),
+      0 0 0 0 rgba(198, 161, 91, 0);
+  }
+}
+
+
 @media (max-width: 450px) {
   .rsvp-section {
     padding-bottom: 128px;
