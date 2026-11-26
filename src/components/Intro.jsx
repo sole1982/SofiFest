@@ -6,7 +6,7 @@ import heroQuincesPoster from "../assets/img/dark-blue-texture.jpg";
 
 const quincesLogo = "/img/quinces-logo.webp";
 const invitationCover = "/img/invitation-cover.webp";
-const invitationOpening = "/vid/invitation-opening.mp4";
+const invitationOpening = "/invitation-opening.mp4";
 
 /**
  * Envelope-opening sequence and hero header. Mounted immediately so a guest
