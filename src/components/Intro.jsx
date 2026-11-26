@@ -11,7 +11,7 @@ const invitationOpening = "/vid/invitation-opening.mp4";
 
 // DATOS EDITABLES DE LA INVITACIÓN
 const quinceaneraName = "Sofi";
-const eventDate = "11 · 12 · 2026";
+const eventDate = "19 · 12 · 2026";
 
 export function Intro({ onEnvelopeOpen }) {
   const [invitationOpen, setInvitationOpen] = useState(false);
