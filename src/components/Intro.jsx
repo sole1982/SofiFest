@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -9,10 +8,12 @@ const quincesLogo = "/img/quinces-logo.webp";
 const invitationCover = "/img/invitation-cover.webp";
 const invitationOpening = "/vid/invitation-opening.mp4";
 
-// DATOS EDITABLES DE LA INVITACIÓN
-const quinceaneraName = "Sofi";
-const eventDate = "19 · 12 · 2026";
-
+/**
+ * Envelope-opening sequence and hero header. Mounted immediately so a guest
+ * always sees something within the first paint; everything past this point
+ * (galleries, maps, RSVP) lives in <Invitation> and only loads once the
+ * envelope has been opened.
+ */
 export function Intro({ onEnvelopeOpen }) {
   const [invitationOpen, setInvitationOpen] = useState(false);
   const [envelopeOpening, setEnvelopeOpening] = useState(false);
@@ -25,12 +26,20 @@ export function Intro({ onEnvelopeOpen }) {
     return () => document.body.classList.remove("invitation-locked");
   }, [invitationOpen]);
 
+  // Safety net: a slow connection, a codec quirk, or a stalled/aborted
+  // request must never leave a guest stuck looking at the envelope forever.
+  // Whatever happens to the video, the invitation opens on its own well
+  // within a guest's patience.
   useEffect(() => {
     if (!envelopeOpening) return undefined;
     const timeoutId = setTimeout(() => setInvitationOpen(true), 5000);
     return () => clearTimeout(timeoutId);
   }, [envelopeOpening]);
 
+  // If a guest switches apps mid-opening (e.g. a WhatsApp notification), the
+  // video would otherwise keep playing off-screen and could finish before
+  // they come back. Pause it while hidden and resume from the same frame,
+  // exactly like useBackgroundMusic already does for the audio track.
   useEffect(() => {
     if (invitationOpen) return undefined;
 
@@ -45,7 +54,7 @@ export function Intro({ onEnvelopeOpen }) {
         try {
           await video.play();
         } catch {
-          // El invitado puede volver a tocar la invitación.
+          // Autoplay may be blocked after returning; the guest can tap again.
         }
       }
     };
@@ -58,7 +67,7 @@ export function Intro({ onEnvelopeOpen }) {
     if (envelopeOpening) return;
     setEnvelopeOpening(true);
     onEnvelopeOpen();
-    introVideo.current?.play().catch(() => {});
+    introVideo.current?.play().catch(() => { });
   }
 
   function trackIntroProgress() {
@@ -77,7 +86,7 @@ export function Intro({ onEnvelopeOpen }) {
   return (
     <>
       <section
-        className={`invitation-cover ${envelopeOpening ? "is-opening" : ""} ${invitationOpen ? "is-open" : ""}`}
+        className={invitation-cover ${envelopeOpening ? "is-opening" : ""} ${invitationOpen ? "is-open" : ""}}
         aria-hidden={invitationOpen}
         aria-label="Abrir invitación"
         role="button"
@@ -90,14 +99,9 @@ export function Intro({ onEnvelopeOpen }) {
           }
         }}
       >
-        <img
-          className={`intro-media intro-poster ${introVisible ? "hidden" : ""}`}
-          src={invitationCover}
-          alt=""
-        />
-
+        <img className={intro-media intro-poster ${introVisible ? "hidden" : ""}} src={invitationCover} alt="" />
         <video
-          className={`intro-media intro-video ${introVisible ? "visible" : ""}`}
+          className={intro-media intro-video ${introVisible ? "visible" : ""}}
           ref={introVideo}
           src={invitationOpening}
           poster={invitationCover}
@@ -109,10 +113,7 @@ export function Intro({ onEnvelopeOpen }) {
           onEnded={() => setInvitationOpen(true)}
           onError={handleIntroError}
         />
-
-        {!envelopeOpening && (
-          <p className="intro-hint">TOCÁ PARA ABRIR TU INVITACIÓN</p>
-        )}
+        {!envelopeOpening && <p className="intro-hint">Toca para abrir</p>}
       </section>
 
       <header className="hero" id="inicio">
@@ -131,50 +132,22 @@ export function Intro({ onEnvelopeOpen }) {
 
         <nav className="navbar">
           <a className="brand" href="#inicio">
-            <img
-              src={quincesLogo}
-              width={44}
-              height={44}
-              alt="Volver al inicio"
-            />
+            <img src={quincesLogo} width={44} height={44} alt="Volver al inicio" />
           </a>
-
           <div className="nav-links">
-            <a href="#detalles">La celebración</a>
+            <a href="#detalles">El gran día</a>
             <a href="#contacto">Contacto</a>
-            <a href="#confirmar">Confirmar asistencia</a>
+            <a href="#confirmar">Confirmar</a>
           </div>
         </nav>
 
         <div className="hero-overlay" />
-
         <div className="hero-content">
-          <p className="hero-kicker">UNA NOCHE MÁGICA</p>
-
-          <h1>
-            <em className="quinceanera-title">
-              <span>{quinceaneraName}</span>
-            </em>
-          </h1>
-
-          <p className="hero-subtitle">MIS QUINCE AÑOS</p>
-          <p className="hero-date">{eventDate}</p>
-
-          <a className="outline-button" href="#bienvenida">
-            DESCUBRÍ LOS DETALLES
-          </a>
+          <h1><em className="quinceanera-title">
+            <span>Sofía</span>
+          </em></h1>
+          <p className="hero-date">19 · 12 · 2026</p>
+          <a className="outline-button" href="#bienvenida">Descubre los detalles</a>
         </div>
-
         <a className="scroll-hint" href="#bienvenida" aria-label="Continuar">
           <b><ChevronDown aria-hidden="true" /></b>
-        </a>
-      </header>
-    </>
-  );
-}
-
-        </a>
-      </header>
-    </>
-  );
-}
