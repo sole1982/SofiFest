@@ -236,10 +236,7 @@ export function Invitation() {
             <source src={stars} type="video/mp4" />
           </video>
 
-          <div className="quote-content">
-            <p>“Haz de tu vida un sueño y de tu sueño una realidad.”</p>
-            <span>- Antoine de Saint-Exupéry</span>
-          </div>
+         
         </section>
 
         <section className="gift-section light-paper-section" id="regalos">
