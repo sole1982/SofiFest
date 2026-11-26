@@ -1391,3 +1391,49 @@ footer .signature {
     margin: 8px 0 20px;
   }
 }
+
+/* MEJORAR CONTRASTE: ESPERA, CONTADOR Y CONFIRMACIÓN */
+
+/* Títulos de las secciones */
+.countdown-section h2,
+.rsvp-section h2 {
+  color: #704653;
+}
+
+/* Texto de espera y etiquetas del contador */
+.countdown-section,
+.rsvp-section {
+  color: #FFF8F3;
+}
+
+.countdown strong {
+  color: #F3D5AE;
+}
+
+.countdown span {
+  color: #FFF8F3;
+}
+
+/* Texto introductorio de confirmar asistencia */
+.rsvp-intro p {
+  color: #FFF8F3;
+}
+
+/* Formulario de confirmación */
+.rsvp-form,
+.rsvp-confirmation {
+  color: #684F54;
+}
+
+.rsvp-form label,
+.rsvp-form legend,
+.rsvp-form p,
+.rsvp-confirmation p {
+  color: #684F54;
+}
+
+/* Títulos dentro de la confirmación */
+.rsvp-confirmation h3 {
+  color: #805564;
+}
+
