@@ -86,7 +86,7 @@ export function Intro({ onEnvelopeOpen }) {
   return (
     <>
       <section
-        className={invitation-cover ${envelopeOpening ? "is-opening" : ""} ${invitationOpen ? "is-open" : ""}}
+       className={`invitation-cover ${envelopeOpening ? "is-opening" : ""} ${invitationOpen ? "is-open" : ""}`}
         aria-hidden={invitationOpen}
         aria-label="Abrir invitación"
         role="button"
