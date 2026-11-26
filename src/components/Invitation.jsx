@@ -18,7 +18,7 @@ import dress2 from "../assets/img/dress-2.jpg";
 import dress3 from "../assets/img/dress-3.jpg";
 import dress4 from "../assets/img/dress-4.jpg";
 
-import floralOrnament from "../assets/img/floral-ornament.webp";
+import floralOrnament from "../assets/img/floral-ornament.jpg";
 import bowOrnament from "../assets/img/bow-ornament.webp";
 
 import stars from "../assets/vid/stars.mp4";
@@ -34,7 +34,7 @@ import "swiper/css/pagination";
 // Import Swiper required modules
 import { Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
-const quincesDate = new Date("2026-12-11T19:00:00-05:00");
+const quincesDate = new Date("2026-12-19T19:00:00-05:00");
 
 const quinceaneraGallery = [
   { id: 1, src: quinceanera1, alt: "Quinceañera con mano en la cintura" },
@@ -56,13 +56,13 @@ const contactMessage =
   "¡Hola! ¿Podrías ayudarme con indicaciones para llegar a la celebración de los 15 años? 😅🙏";
 
 const contactWhatsAppUrl =
-  `https://wa.me/573133422193?text=${encodeURIComponent(contactMessage)}`;
+ `https://wa.me/5493644100884?text=${encodeURIComponent(contactMessage)}`;
 
 const mapUrlReception =
   "https://www.google.com/maps/search/?api=1&query=Celebraciones+Argento+Cristal,+Envigado,+Antioquia";
 
 const mapEmbedUrlReception =
-  "https://www.google.com/maps?q=Celebraciones%20Argento%20Cristal%2C%20Envigado%2C%20Antioquia&t=k&output=embed";
+  "https://maps.app.goo.gl/dnYopxGg1BpoUKJJ6";
 
 const swiperSettings = {
   slidesPerView: "auto",
@@ -196,7 +196,7 @@ export function Invitation() {
           <div className="map-copy">
             <p className="kicker">Cómo llegar</p>
             <p>Salón Damalis</p>
-            <span>Calle 51</span>
+            <span>Calle 51 entre 6 y 4 </span>
             <a className="map-link" href={mapUrlReception} target="_blank" rel="noreferrer">Abrir en Google Maps</a>
           </div>
          
