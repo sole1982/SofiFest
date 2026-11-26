@@ -12,7 +12,12 @@ function App() {
 
   return (
     <>
-      <Intro onEnvelopeOpen={() => setEnvelopeOpened(true)} />
+     <Intro
+  onEnvelopeOpen={() => {
+    setEnvelopeOpened(true);
+    music.play();
+  }}
+/>
 
       {/* Mounted as soon as the guest starts opening the envelope, so its
           galleries, textures and map embeds never compete with the intro
