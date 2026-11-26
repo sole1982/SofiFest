@@ -155,5 +155,17 @@ export function Intro({ onEnvelopeOpen }) {
           <p className="hero-date">19 · 12 · 2026</p>
           <a className="outline-button" href="#bienvenida">Descubre los detalles</a>
         </div>
-        <a className="scroll-hint" href="#bienvenida" aria-label="Continuar">
-          <b><ChevronDown aria-hidden="true" /></b>
+           <a
+          className="scroll-hint"
+          href="#bienvenida"
+          aria-label="Continuar"
+        >
+          <b>
+            <ChevronDown aria-hidden="true" />
+          </b>
+        </a>
+
+      </header>
+    </>
+  );
+}
